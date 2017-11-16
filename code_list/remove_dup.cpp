@@ -22,12 +22,14 @@ int main() {
     }
     // display
     print(linked_list, itr);
+    cout << endl;
     for (itr = linked_list.begin(); itr != linked_list.end(); ++itr) {
         if (hashmap[*itr])
             linked_list.erase(itr);
         else 
             hashmap[*itr]++;
     }
+    // linked_list.unique();
     print(linked_list, itr);
     return 0;
 }
