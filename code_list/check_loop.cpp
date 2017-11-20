@@ -19,5 +19,6 @@ int main() {
     if (linked_list.end() == linked_list.begin()) cout << "it works" << endl;
     else cout << "it doesnt";
     print(linked_list, itr);
+    cout << "under construction";
     return 0;
 }
