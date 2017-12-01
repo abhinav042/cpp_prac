@@ -31,9 +31,9 @@ int main() {
     issa_stack.push(3);
     issa_stack.push(2);
     issa_stack.push(5);
-    // issa_stack.push(1);
-    // issa_stack.push(324);
-    // issa_stack.push(123);
+    issa_stack.push(1);
+    issa_stack.push(324);
+    issa_stack.push(123);
     issa_stack.push(0);
     issa_stack.push(2);
     issa_stack.push(5);
