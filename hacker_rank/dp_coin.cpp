@@ -46,7 +46,7 @@ long long make_change(vector<int> coins, int money, unordered_map <string, long>
         ways += make_change (coins, remaining_money, cache, index + 1);
     }
     cache[key] = ways;
-    auto itr = cache.find(key);
+    // auto itr = cache.find(key);
     // if (itr != cache.end()) {
     //     cout << "*itr" << endl;
     // }
