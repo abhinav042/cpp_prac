@@ -23,32 +23,35 @@
 
 using namespace std;
 
-int number_needed(string a, string b) {
-    int ans = 0;
-    unordered_map <int, int> count;
-    for (auto letter : a) {
-        count[letter]++;
+bool ransom_note(vector<string> magazine, vector<string> ransom) {
+    unordered_map <string, int> freq;
+    for (auto word : magazine) {
+        freq[word]++;
     }
-    for (auto letter : b) {
-        if (!count[letter])
-            ans++;
-        else if (count[letter]) {
-            count[letter]--;
+    for (auto word : ransom) {
+        freq[word]--;
+        if (freq[word] < 0) {
+            return false;
         }
     }
-    for (auto itr : count) {
-        if (itr.second > 0) {
-            ans+=itr.second;
-        }
-    }
-    return ans;
+    return true;
 }
 
 int main(){
-    string a;
-    cin >> a;
-    string b;
-    cin >> b;
-    cout << number_needed(a, b) << endl;
+    int m;
+    int n;
+    cin >> m >> n;
+    vector<string> magazine(m);
+    for(int magazine_i = 0;magazine_i < m;magazine_i++){
+       cin >> magazine[magazine_i];
+    }
+    vector<string> ransom(n);
+    for(int ransom_i = 0;ransom_i < n;ransom_i++){
+       cin >> ransom[ransom_i];
+    }
+    if(ransom_note(magazine, ransom))
+        cout << "Yes\n";
+    else
+        cout << "No\n";
     return 0;
 }
