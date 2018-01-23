@@ -2,4 +2,6 @@
 
 ## Running Instructions 
 Just boot up your terminal and run `g++ -std=c++11 'file_name' -o 'compiled_file'`
-After that just run `./compiled_file` 
+After that just run `./compiled_file`
+
+For CTCI HackerRank solutions go to the hacker_rank folder
