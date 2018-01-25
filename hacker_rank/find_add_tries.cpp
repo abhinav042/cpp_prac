@@ -70,7 +70,7 @@ void find_num_words(string word, Trie_node* node) {
     for (int i = 0; i < word.length() - 1; i++) {
         if (node->children[word[i] - 'a'] == nullptr) {
             // cout << "i get run.." << endl;
-            return 0;
+            return;
         }
         // cout << node->children[word[i] - 'a'] << endl;
     }
