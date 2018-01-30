@@ -53,29 +53,23 @@ void insert(string word, Trie_node* node, int index = 0) {
     } else {
         Trie_node* new_node = get_node();
         node->children[current_char - 'a'] = new_node;
-        // cout << node->children[current_char - 'a'] << endl;
+        
         insert(word, new_node, index + 1);
     }
 }
 
 void find_num_words(string word, Trie_node* node) {
     Trie_node *temp = node;
-    // if (index == word.length() - 1) {
-    //     return node->num_words;
-    // } 
-    // if (node->children[word[index]] == nullptr) {
-    //     return 0;
-    // }
-    // find_num_words(word, node->children[word[index]], index + 1);
+
     for (int i = 0; i < word.length() - 1; i++) {
         if (node->children[word[i] - 'a'] == nullptr) {
-            // cout << "i get run.." << endl;
+
             return;
         }
-        // cout << node->children[word[i] - 'a'] << endl;
+
     }
     cout << node->num_words << endl;
-    // return node->num_words;
+
 }
 
 int main(){
@@ -89,7 +83,7 @@ int main(){
         if (op == "add") {
             insert(contact, root);
         } else if (op == "find") {
-            // cout << find_num_words(contact, root) << endl;
+           
             find_num_words(contact, root);
         }
     }

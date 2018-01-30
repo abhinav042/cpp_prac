@@ -66,12 +66,10 @@ int main() {
             
             // initial push
             if (a[a_i] >= median) {
-                // cout << "the median is : " << median << endl;
-                // cout << "my val is : " << a[a_i] << endl;
+                
                 max_vals.push(a[a_i]);
             } else {
-                // cout << "the median is : " << median << endl;
-                // cout << "my val is : " << a[a_i] << endl;
+                
                 min_vals.push(a[a_i]);
             }
             
@@ -79,16 +77,14 @@ int main() {
             max_size = max_vals.size();
             min_size = min_vals.size();
             if (max_size - min_size > 1) {
-                // cout << "max_vals size is : " << max_size << endl;
+                
                 min_vals.push(max_vals.top());
-                // cout << "the val getting popped is : " << max_vals.top() << endl;
+                
                 max_vals.pop();
             } else if (min_size - max_size > 1) {
-                // cout << "min_vals size is : " << min_size << endl;
-                // cout << "max_vals size is : " << max_size << endl;
-                // cout << "their diff is : " << max_size - min_size << endl;
+                
                 max_vals.push(min_vals.top());
-                // cout << "min top is : " << min_vals.top() << endl;
+                
                 min_vals.pop();
             }
             max_size = max_vals.size();
@@ -105,7 +101,7 @@ int main() {
             cout << median << endl;
             
         }
-        // cout << endl;
+        
     }
     
     return 0;

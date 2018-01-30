@@ -15,9 +15,11 @@ Node::Node(int array, int index, int value) {
     this->array = array;
     this->index = index;
     this->value = value;
+
+    bool operator<(const Node&, const Node&);
 }
 
-bool operator< (const Node& node1, const Node& node2) {
+bool Node::operator< (const Node& node1, const Node& node2) {
     return node1.value < node2.value;
 }
 
@@ -26,8 +28,18 @@ int* merge(vector < vector <int> > input) {
     int total_elem = 0;
     for (int i = 0; i < input.size(); i++) {
         total_elem += input[i].size();
+        pq.push(Node(i, 0, input[i][0]));
     }
-    return nullptr;
+    
+    int result[total_elem];
+    for (int i = 0; pq.size()!=0; i++) {
+        Node min_node = pq.top();
+        pq.pop();
+        if (min_node.index + 1 < input[min_node].size())
+            pq.push(Node(min_node.array, min_node.index + 1, input[min_node.array][min_node.index + 1]));
+        result[min_node.value];
+    }
+    return result;
 }
 
 int main() {
