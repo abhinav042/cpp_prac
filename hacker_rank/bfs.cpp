@@ -17,7 +17,6 @@ class Graph {
         Graph(int n) {
             this->V = n;
             list <int> adj[n];
-            // adj = new list <int>[n];
         }
     
         void add_edge(int u, int v) {
