@@ -9,8 +9,9 @@ int fibonacci(int n) {
     }
     int first_num = 0;
     int second_num = 1;
+    int fib_num;
     for (int i = 2; i < n; i++) {
-        int fib_num = first_num + second_num;
+        fib_num = first_num + second_num;
         first_num = second_num;
         second_num = fib_num;
     }
