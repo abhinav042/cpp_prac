@@ -15,7 +15,7 @@ int fibonacci(int n) {
         first_num = second_num;
         second_num = fib_num;
     }
-    return first_num + second_num;
+    return fib_num;
 }
 
 int main() {
